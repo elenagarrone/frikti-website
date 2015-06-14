@@ -8,4 +8,9 @@ feature 'homepage' do
     expect(page).to have_link 'About'
     expect(page).to have_link 'Contact'
   end
+
+  scenario 'should display the links to other pages' do
+    visit '/homepage'
+    expect(page).to have_css '#myCarousel'
+  end
 end
