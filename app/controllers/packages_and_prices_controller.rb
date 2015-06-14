@@ -1,0 +1,2 @@
+class PackagesAndPricesController < ApplicationController
+end

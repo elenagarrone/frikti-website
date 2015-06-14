@@ -8,13 +8,13 @@
         <%= link_to "Portfolio", root_path, :class => "page_link" %>
       </li>
       <li>
-        <%= link_to "Packages & Prices", root_path, :class => "page_link" %>
+        <%= link_to "Packages & Prices", packages_and_prices_path, :class => "page_link" %>
       </li>
       <li>
-        <%= link_to "About", root_path, :class => "page_link" %>
+        <%= link_to "About", about_index_path, :class => "page_link" %>
       </li>
       <li>
-        <%= link_to "Contact", root_path, :class => "page_link" %>
+        <%= link_to "Contact", new_contact_path, :class => "page_link" %>
       </li>
       <% if user_signed_in? %>
         <li>

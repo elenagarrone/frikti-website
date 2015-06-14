@@ -56,5 +56,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  resources :homepage
+  resources :homepage, only: [:index]
+  resources :about, only: [:index]
+  resources :packages_and_prices, only: [:index]
+  resources :contacts, only: [:new, :create]
 end

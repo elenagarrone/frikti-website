@@ -27,6 +27,10 @@ gem "autoprefixer-rails"
 gem "twitter-bootstrap-rails"
 gem "devise"
 gem "figaro"
+gem 'mail_form'
+gem 'simple_form'
+gem 'mail'
+gem 'rails_refactor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
