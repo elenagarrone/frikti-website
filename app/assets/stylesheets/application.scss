@@ -36,11 +36,13 @@ html, body {
   margin: 0;
 }
 
-.navigation li {
-  display: inline;
-  text-transform: uppercase;
-  list-style: none;
-  padding: 0 15px;
+.navigation {
+  li {
+    display: inline;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 0 15px;
+  }
 }
 
 .page_link { text-decoration: none; }

@@ -5,3 +5,10 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+
+.carousel-inner > .item {
+  -webkit-transition: 1.1s ease-in-out left;
+  -moz-transition: 1.1s ease-in-out left;
+  -o-transition: 1.1s ease-in-out left;
+  transition: 1.1s ease-in-out left;
+}
