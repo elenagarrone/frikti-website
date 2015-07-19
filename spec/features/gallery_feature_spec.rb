@@ -42,7 +42,7 @@ feature 'portfolio' do
       scenario 'create a gallery' do
         visit '/portfolio/new'
         fill_in('Name', with: 'Test Gallery2')
-        click_button 'Create'
+        click_button 'Submit'
         expect(page).to have_content 'Test Gallery2'
         expect(current_path).to eq "/portfolio"
         click_link 'Delete Test Gallery2'
@@ -56,12 +56,12 @@ feature 'portfolio' do
 
       scenario 'edit a gallery' do
         visit '/portfolio'
-        click_link 'Edit Test Gallery2'
+        click_link 'Edit Test Gallery'
         fill_in('Name', with: 'Test')
-        click_button 'Create'
+        click_button 'Submit'
         expect(page).to have_content 'Test'
-        expect(page).to_not have_content 'Test'
-        click_link 'Delete Test Gallery2'
+        expect(page).to_not have_content 'Test Gallery'
+        click_link 'Delete Test'
       end
     end
   end
