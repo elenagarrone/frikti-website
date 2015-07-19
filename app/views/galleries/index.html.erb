@@ -1,17 +1,12 @@
 <div class="container">
-
-  <% if notice %>
-    <div class="alert">
-      <%= notice %>
-    </div>
-  <% end %>
-
   <h1>Portfolio</h1>
   <% if user_signed_in? %>
-    <%= link_to "New Gallery", new_gallery_path, :class => "new_gallery btn btn-default pull-right" %>
+    <%= link_to "New Gallery", new_gallery_path, :class => "new_gallery btn btn-success pull-right" %>
   <% end %>
 
   <% @galleries.each do |gallery| %> 
     <%= gallery.name %>
+    <%= link_to "Delete #{gallery.name}", gallery_path(:id => gallery.id), method: :delete, :class => "delete_gallery btn btn-danger" %>
+    <%= link_to "Edit #{gallery.name}", edit_gallery_path(gallery), :class => "edit_gallery btn btn-warning"%>
   <% end %>
 </div>

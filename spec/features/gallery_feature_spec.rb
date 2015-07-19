@@ -41,10 +41,27 @@ feature 'portfolio' do
 
       scenario 'create a gallery' do
         visit '/portfolio/new'
-        fill_in('Name', with: 'Test Gallery')
+        fill_in('Name', with: 'Test Gallery2')
         click_button 'Create'
-        expect(page).to have_content 'Test Gallery'
+        expect(page).to have_content 'Test Gallery2'
         expect(current_path).to eq "/portfolio"
+        click_link 'Delete Test Gallery2'
+      end
+
+      scenario 'delete a gallery' do
+        visit '/portfolio'
+        click_link 'Delete Test Gallery'
+        expect(page).to_not have_content 'Test Gallery'
+      end
+
+      scenario 'edit a gallery' do
+        visit '/portfolio'
+        click_link 'Edit Test Gallery2'
+        fill_in('Name', with: 'Test')
+        click_button 'Create'
+        expect(page).to have_content 'Test'
+        expect(page).to_not have_content 'Test'
+        click_link 'Delete Test Gallery2'
       end
     end
   end
