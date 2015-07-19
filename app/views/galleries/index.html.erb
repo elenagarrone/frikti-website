@@ -1,3 +1,17 @@
-<h1>galleries</h1>
-<p>needs to create a new gallery</p>
-<p>gallery needs to have images. Check instaDog to see last modifications</p>
+<div class="container">
+
+  <% if notice %>
+    <div class="alert">
+      <%= notice %>
+    </div>
+  <% end %>
+
+  <h1>Portfolio</h1>
+  <% if user_signed_in? %>
+    <%= link_to "New Gallery", new_gallery_path, :class => "new_gallery btn btn-default pull-right" %>
+  <% end %>
+
+  <% @galleries.each do |gallery| %> 
+    <%= gallery.name %>
+  <% end %>
+</div>

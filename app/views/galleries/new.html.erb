@@ -1,0 +1,10 @@
+<div class="container">
+  <% if user_signed_in? %>
+    <h1>Create a new gallery</h1>
+    <%= form_for @gallery, html: {multipart: true} do |f| %>
+      <%= f.label :name %>
+      <%= f.text_area :name %>
+      <%= f.submit 'Create' %>
+    <% end %>
+  <% end %>
+</div>

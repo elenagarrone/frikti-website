@@ -1,21 +1,23 @@
 <div class='container'>
-  <% if notice %>
-    <div class="alert">
-      <%= notice %>
-    </div>
-  <% end %>
-  <div class="contact-form" id='contact'>
-    <h3>Contact</h3>
-    <p>Tel.: 07725911807<p>
-    <a href='https://www.facebook.com/Frikti'><img src='https://s3-eu-west-1.amazonaws.com/frikti/assets/facebook-icon-blue.png'></a>
-
-   <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-      <%= f.input :name, :required => true %>
-      <%= f.input :email, :required => true %>
-      <%= f.input :message, :as => :text, :required => true %>
-      <div class="form-actions">
-        <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+  <% if user_signed_in? %>
+    <% if notice %>
+      <div class="alert">
+        <%= notice %>
       </div>
     <% end %>
-  </div>
+    <div class="contact-form" id='contact'>
+      <h3>Contact</h3>
+      <p>Tel.: 07725911807<p>
+      <a href='https://www.facebook.com/Frikti'><img src='https://s3-eu-west-1.amazonaws.com/frikti/assets/facebook-icon-blue.png'></a>
+
+     <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+        <%= f.input :name, :required => true %>
+        <%= f.input :email, :required => true %>
+        <%= f.input :message, :as => :text, :required => true %>
+        <div class="form-actions">
+          <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>

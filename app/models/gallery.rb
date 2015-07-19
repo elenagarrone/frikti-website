@@ -1,3 +1,4 @@
 class Gallery < ActiveRecord::Base
-  attribute :name, :validate => true
+  has_many :thumbnails, dependent: :destroy
+  validates_presence_of :name
 end
