@@ -20,7 +20,7 @@ class GalleriesController < ApplicationController
   end
 
   def destroy
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
     @gallery.destroy
     if @gallery.destroyed?
       flash[:notice] = "The gallery has been deleted."
@@ -32,11 +32,11 @@ class GalleriesController < ApplicationController
   end
 
   def edit
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
   end
 
   def update
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
     @gallery.update(gallery_params)
     if @gallery.save
       flash[:notice] = "The gallery has been edited."
@@ -48,6 +48,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
+    @gallery = Gallery.friendly.find(params[:id])
   end
 
   def gallery_params

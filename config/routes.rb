@@ -60,5 +60,7 @@ Rails.application.routes.draw do
   resources :about, only: [:index]
   resources :packages_and_prices, only: [:index]
   resources :contacts, only: [:new, :create]
-  resources :galleries, :path => "portfolio", shallow: true 
+  resources :galleries, :path => "portfolio", shallow: true do
+    resources :thumbnails
+  end
 end
