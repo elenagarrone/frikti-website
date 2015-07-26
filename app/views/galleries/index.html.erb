@@ -1,17 +1,24 @@
 <div class="container">
-  <h1>Portfolio</h1>
-  <% if user_signed_in? %>
-    <%= link_to "New Gallery", new_gallery_path, :class => "new_gallery btn btn-success pull-right" %>
-  <% end %>
+  <div class="main-heading">
+    <h1>Portfolio</h1>
+    <% if user_signed_in? %>
+      <%= link_to "New Gallery", new_gallery_path, :class => "new_gallery btn btn-success pull-right" %>
+    <% end %>
+  </div>
 
   <% @galleries.each do |gallery| %> 
     <div class="gallery">
-      <%= link_to "#{gallery.name}", gallery_thumbnails_path(gallery)%>
+      <h2><%= link_to "#{gallery.name}", gallery_path(:id => gallery.friendly_id)%></h2>
       <% if user_signed_in? %>
-        <%= link_to "Delete #{gallery.name}", gallery_path(:id => gallery.id), method: :delete, :class => "delete_gallery btn btn-danger" %>
-        <%= link_to "Edit #{gallery.name}", edit_gallery_path(gallery), :class => "edit_gallery btn btn-warning"%>
-        <%= link_to "Add picture to #{gallery.name}", new_gallery_thumbnail_path(gallery), :class => "new_picture btn btn-success" %>
+        <div class="options">
+          <%= link_to "Delete #{gallery.name}", gallery_path(:id => gallery.id), method: :delete, :class => "delete_gallery btn btn-danger" %>
+          <%= link_to "Edit #{gallery.name}", edit_gallery_path(gallery), :class => "edit_gallery btn btn-warning"%>
+          <%= link_to "Add picture to #{gallery.name}", new_gallery_thumbnail_path(gallery), :class => "new_picture btn btn-success" %>
+        </div>
       <% end %>
+
+      <%= render 'layouts/thumbnails', :locals => { :gallery => gallery } %>
+
     </div>
   <% end %>
 </div>

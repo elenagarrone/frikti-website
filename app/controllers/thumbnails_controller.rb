@@ -11,7 +11,7 @@ class ThumbnailsController < ApplicationController
 
   def create
     @gallery = Gallery.friendly.find(params[:gallery_id])
-    @gallery_id = @gallery.id
+    @gallery_id = @gallery.friendly_id
     @thumbnail = @gallery.thumbnails.create(thumbnail_params)
     if @thumbnail.save
       flash[:notice] = "The thumbnail has been created."
@@ -23,8 +23,8 @@ class ThumbnailsController < ApplicationController
   end
 
   def destroy
-    @gallery = Gallery.find(params[:gallery_id])
-    @gallery_id = @gallery.id
+    @gallery = Gallery.friendly.find(params[:gallery_id])
+    @gallery_id = @gallery.friendly_id
     @thumbnail = @gallery.thumbnails.find(params[:id])
     @thumbnail.destroy
     if @thumbnail.destroyed?

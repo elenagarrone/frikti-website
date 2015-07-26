@@ -1,17 +1,11 @@
 <div class="container">
-  <h1><%= @gallery.name %></h1>
-  <% @gallery.thumbnails.each do |thumbnail| %> 
-    <div class="thumb">
-      <%= image_tag thumbnail.thumb.url(:original) %>
-      <h1><%= @gallery.id%></h1>
-      <% if user_signed_in? %>
-        <%= link_to "X", gallery_thumbnail_path(@gallery.id, thumbnail), method: :delete, :class => "delete_thumb btn btn-danger pull-right" %>
-        <%= link_to "Edit", edit_gallery_thumbnail_path(@gallery.id, thumbnail), :class => "edit_thumb btn btn-warning pull-right"%>
-      <% end %>
-    </div>
-  <% end %>
+  <div class="main-heading">
+    <h1><%= @gallery.name %></h1>
+    <% if user_signed_in? %>
+      <%= link_to "Add picture", new_gallery_thumbnail_path(@gallery), :class => "new_picture btn btn-success pull-right" %>
+    <% end %>
+  </div>
 
-  <% if user_signed_in? %>
-    <%= link_to "Add picture", new_gallery_thumbnail_path(@gallery), :class => "new_picture btn btn-success pull-right" %>
-  <% end %>
+  <%= render 'layouts/thumbnails', :locals => { :gallery => @gallery } %>
+  
 </div>

@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root to: "homepage#index"
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -61,6 +60,6 @@ Rails.application.routes.draw do
   resources :packages_and_prices, only: [:index]
   resources :contacts, only: [:new, :create]
   resources :galleries, :path => "portfolio" do
-    resources :thumbnails
+    resources :thumbnails, :path => "images"
   end
 end
