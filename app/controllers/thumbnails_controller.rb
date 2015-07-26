@@ -13,9 +13,10 @@ class ThumbnailsController < ApplicationController
     @gallery = Gallery.friendly.find(params[:gallery_id])
     @gallery_id = @gallery.friendly_id
     @thumbnail = @gallery.thumbnails.create(thumbnail_params)
+    @thumbnail_id = @thumbnail.id
     if @thumbnail.save
       flash[:notice] = "The thumbnail has been created."
-      redirect_to gallery_path(@gallery_id)
+      redirect_to new_gallery_thumbnail_picture_path(@gallery_id, @thumbnail_id)
     else
       flash[:notice] = "Oops, something went wrong. Please try again."
       redirect_to new_gallery_thumbnail_path(@gallery_id)
@@ -28,7 +29,7 @@ class ThumbnailsController < ApplicationController
     @thumbnail = @gallery.thumbnails.find(params[:id])
     @thumbnail.destroy
     if @thumbnail.destroyed?
-      flash[:notice] = "The thumbnail has been deleted."
+      flash[:notice] = "The picture has been deleted."
       redirect_to gallery_path(@gallery_id)
     else
       flash[:notice] = "Oops, something went wrong. Please try again."

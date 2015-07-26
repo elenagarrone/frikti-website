@@ -1,0 +1,4 @@
+<%= form_for @picture, url: gallery_thumbnail_picture_index_path(@gallery, @thumbnail, @picture), html: {multipart: true} do |f| %>
+  <%= f.file_field :picture %>
+  <%= f.submit 'Submit' %>
+<% end %>

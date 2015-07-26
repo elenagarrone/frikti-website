@@ -60,6 +60,8 @@ Rails.application.routes.draw do
   resources :packages_and_prices, only: [:index]
   resources :contacts, only: [:new, :create]
   resources :galleries, :path => "portfolio" do
-    resources :thumbnails, :path => "images"
+    resources :thumbnails, :path => "images" do
+      resources :picture, only: [:new, :create, :edit, :update], :controller => "pictures"
+    end
   end
 end
