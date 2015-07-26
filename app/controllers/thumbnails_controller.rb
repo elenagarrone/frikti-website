@@ -24,14 +24,15 @@ class ThumbnailsController < ApplicationController
 
   def destroy
     @gallery = Gallery.find(params[:gallery_id])
+    @gallery_id = @gallery.id
     @thumbnail = @gallery.thumbnails.find(params[:id])
     @thumbnail.destroy
     if @thumbnail.destroyed?
       flash[:notice] = "The thumbnail has been deleted."
-      redirect_to galleries_path
+      redirect_to gallery_path(@gallery_id)
     else
       flash[:notice] = "Oops, something went wrong. Please try again."
-      redirect_to galleries_path
+      redirect_to gallery_path(@gallery_id)
     end
   end
 

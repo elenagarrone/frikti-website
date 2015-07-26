@@ -10,7 +10,7 @@
       <% if user_signed_in? %>
         <%= link_to "Delete #{gallery.name}", gallery_path(:id => gallery.id), method: :delete, :class => "delete_gallery btn btn-danger" %>
         <%= link_to "Edit #{gallery.name}", edit_gallery_path(gallery), :class => "edit_gallery btn btn-warning"%>
-        <%= link_to "Add picture", new_gallery_thumbnail_path(gallery), :class => "new_picture btn btn-success" %>
+        <%= link_to "Add picture to #{gallery.name}", new_gallery_thumbnail_path(gallery), :class => "new_picture btn btn-success" %>
       <% end %>
     </div>
   <% end %>
