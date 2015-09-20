@@ -33,7 +33,7 @@ $(function() {
   if (user_signed_in != 0) {
     $('#thumbnails').sortable({
       update: function( event, ui ) { 
-        console.log('updating');
+        $.post($(this).data('update-url'), $(this).sortable('serialize'))
       }
     });
   }

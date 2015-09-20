@@ -61,6 +61,9 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   resources :galleries, :path => "portfolio" do
     resources :thumbnails, :path => "images" do
+      collection do
+        post 'sort'
+      end
       resources :picture, only: [:new, :create, :edit, :update], :controller => "pictures"
     end
   end

@@ -1,5 +1,5 @@
-<ul id="thumbnails" class="images_collection">
-  <% locals[:gallery].thumbnails.each do |thumbnail| %> 
+<ul id="thumbnails" class="images_collection" data-update-url="<%= sort_gallery_thumbnails_url(locals[:gallery].id) %>">
+  <% locals[:gallery].thumbnails.order("position").each do |thumbnail| %> 
     <li id="thumbnail_<%= thumbnail.id %>"class="thumb_<%= thumbnail.id %> thumb">
       <a class="fancybox" rel="group" href="<%= thumbnail.picture.image.url(:original)%>" ><%= image_tag thumbnail.thumb.url(:original)%></a>
       <% if user_signed_in? %>

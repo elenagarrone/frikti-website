@@ -37,6 +37,16 @@ class ThumbnailsController < ApplicationController
     end
   end
 
+  def sort
+    # @thumbnails = Gallery.friendly.find(params[:gallery_id]).thumbnails
+    params[:thumbnail].each_with_index do |id, index|
+      # @thumb = thumbnails.find_by_id(id)
+      # @thumb.update_attributes(position: index + 1)
+      Thumbnail.where(id: id).update_all({position: index+1})
+    end
+    render nothing: true
+  end
+
   def thumbnail_params
     params.require(:thumbnail).permit(:thumb)
   end
