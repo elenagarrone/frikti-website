@@ -35,6 +35,7 @@ gem 'paperclip'
 gem 'friendly_id', :require => "friendly_id"
 gem 'aws-sdk', '< 2.0'
 gem 'fancybox2-rails'
+gem 'acts_as_list'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

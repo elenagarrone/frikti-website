@@ -3,4 +3,5 @@ class Thumbnail < ActiveRecord::Base
   has_one :picture, dependent: :destroy
   has_attached_file :thumb
   validates_attachment_content_type :thumb, :content_type => /\Aimage\/.*\Z/
+  acts_as_list
 end
