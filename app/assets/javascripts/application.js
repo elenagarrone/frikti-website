@@ -17,8 +17,9 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+//= require('browserslist');
 
-var browserslist = require('browserslist');
+var browserslist;
 
 var process = function (css, opts) {
     var browsers = browserslist(opts.browsers, { path: opts.file });
