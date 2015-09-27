@@ -15,13 +15,17 @@
  *= require_tree .
  *= require_self
  */
+@import "mixins";
 @import "variables";
+@import "user";
 
 html, body {
   height: 100%;
 }
 
- a, a:hover { color: $textColor; }
+a, a:hover { 
+  color: $textColor; 
+}
 
 .alert {
   font-size: 18px;
@@ -36,35 +40,33 @@ html, body {
   transform: translate(-50%, -50%);
 }
 
-.success{}
-
-.fail {}
-
 .header {
   position: fixed;
   width: 100%;
   height: $headerHight;
   z-index: 1;
-}
 
-.navbar { height: $headerHight}
+  .navbar { 
+    height: $headerHight;
 
-.navbar-brand { 
-  height: auto; 
-  padding: 15px 20px;
-}
+    .navbar-brand { 
+      height: auto; 
+      padding: 15px 20px;
+    }
 
-.nav-links-list {
-  padding: 40px 20px;
-  margin: 0;
-}
+    .navigation {
+      li {
+        display: inline;
+        text-transform: uppercase;
+        list-style: none;
+        padding: 0 15px;
+      }
 
-.navigation {
-  li {
-    display: inline;
-    text-transform: uppercase;
-    list-style: none;
-    padding: 0 15px;
+      .nav-links-list {
+        padding: 40px 20px;
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -105,7 +107,6 @@ html, body {
     }
   }
 }
-
 
 
 

@@ -21,7 +21,9 @@
         <%= notice %>
       </div>
     <% end %>
-    <%= yield %>
+    <section class="container">
+      <%= yield %>
+    </section>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>

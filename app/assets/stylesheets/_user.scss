@@ -1,0 +1,48 @@
+@import "variables";
+
+.user {
+  label {
+    display: none;
+  }
+
+  .form-actions {
+    .btn {
+      &:hover, &:active, &:focus {
+        transition: background .2s ease-in;
+        background: $mainColor; 
+      }
+    }
+  }
+
+  .form-inputs, .form-actions {
+    margin-bottom: 20px;
+
+    input {
+      width: 100%;
+      height: 35px;
+      border: 1px solid $greyColor;
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px $autofillBackground inset;
+      }
+
+      &:hover, &:active, &:focus {
+        outline: none;
+        transition: border .2s ease-in;
+        border: 1px solid $mainColor;
+        transition: color .2s ease-in;
+        color: $white;
+      }
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover, &:active, &:focus {
+      transition: color .2s ease-in;
+      color: $mainColor;
+    } 
+  }
+
+}
