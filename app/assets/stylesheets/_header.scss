@@ -1,0 +1,60 @@
+@import "mixins";
+@import "variables";
+
+.header {
+  @include fontsize(16);
+  font-family: $lithosPro;
+  position: fixed;
+  width: 100%;
+  height: $headerHight;
+  z-index: 1;
+
+  .navbar { 
+    height: $headerHight;
+
+    .navbar-brand { 
+      height: auto; 
+      padding: 15px 20px;
+    }
+
+    .navigation {
+
+      .nav-links-list {
+        padding: 2.5em 2em;
+        margin: 0;
+        color: $textColor;
+
+        li {
+          display: inline;
+          text-transform: uppercase;
+          list-style: none;
+
+          &:first-child {
+            &:before {
+              display: none;
+            }
+          }
+
+          &:before {
+            content: "/";
+            color: $pink;
+            padding: 0 15px;
+          }
+
+          .current {
+            color: $pink;
+          }
+
+          .page_link { 
+            text-decoration: none; 
+
+            &:hover, &:active, &:focus {
+              transition: color .2s ease-in;
+              color: $pink;
+            }
+          }
+        }
+      }
+    }
+  }
+}

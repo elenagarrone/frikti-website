@@ -15,34 +15,19 @@
 //= require fancybox
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require carousel
+//= require sortable-thumb
+//= require navigation
+//= require alert
 //= require turbolinks
 //= require_tree .
 //= require('browserslist');
-
-var browserslist;
-
-var process = function (css, opts) {
-    var browsers = browserslist(opts.browsers, { path: opts.file });
-    ['> 1%', 'last 2 version']
-}
+//= require browserslist
 
 $(document).ready(function() {
   $("a.fancybox").fancybox();
 });
 
-$(function() {
-  setTimeout(function(){
-    $('.alert').css('display', 'none');
-  }, 2000);
-});
 
-$(function() {
-  var user_signed_in = $('#user_signed_in').length;
-  if (user_signed_in != 0) {
-    $('#thumbnails').sortable({
-      update: function( event, ui ) { 
-        $.post($(this).data('update-url'), $(this).sortable('serialize'))
-      }
-    });
-  }
-});  
+ 
+

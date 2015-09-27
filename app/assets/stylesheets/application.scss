@@ -18,9 +18,11 @@
 @import "mixins";
 @import "variables";
 @import "user";
+@import "header";
 
 html, body {
   height: 100%;
+  font-size: 16px;
 }
 
 a, a:hover { 
@@ -28,7 +30,7 @@ a, a:hover {
 }
 
 .alert {
-  font-size: 18px;
+  @include fontsize(16);
   background-color: rgba(255, 255, 255, 0.73);
   padding: 30px;
   border-radius: 2px;
@@ -39,38 +41,6 @@ a, a:hover {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
-.header {
-  position: fixed;
-  width: 100%;
-  height: $headerHight;
-  z-index: 1;
-
-  .navbar { 
-    height: $headerHight;
-
-    .navbar-brand { 
-      height: auto; 
-      padding: 15px 20px;
-    }
-
-    .navigation {
-      li {
-        display: inline;
-        text-transform: uppercase;
-        list-style: none;
-        padding: 0 15px;
-      }
-
-      .nav-links-list {
-        padding: 40px 20px;
-        margin: 0;
-      }
-    }
-  }
-}
-
-.page_link { text-decoration: none; }
 
 .container {
   position: relative;

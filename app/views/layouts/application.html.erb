@@ -6,9 +6,7 @@
     <meta name="description" content="London wedding, portrait photographer">
     <meta name="keywords" content="Wedding photographer London, Portrait photographer London, Family photographer London, Frikti Beskpoke Photography">
     <link href="https://s3-eu-west-1.amazonaws.com/frikti/assets/favicon.ico" rel="shortcut icon">
-    <!--link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'-->
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -23,7 +21,6 @@
     <% end %>
     
     <%= yield %>
-    
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
