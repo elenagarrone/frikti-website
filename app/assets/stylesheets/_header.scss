@@ -8,6 +8,11 @@
   width: 100%;
   height: $headerHight;
   z-index: 1;
+  background: transparent;
+
+  &.add-color {
+    background: $white;
+  }
 
   .navbar { 
     height: $headerHight;

@@ -1,3 +1,9 @@
 // Place all the styles related to the packages_and_prices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixins";
+@import "variables";
+
+.packages-and-prices {
+  background-image: url("_MG_0153");
+}

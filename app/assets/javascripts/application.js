@@ -12,22 +12,17 @@
 //
 //= require jquery
 //= require jquery-ui.min
-//= require fancybox
 //= require jquery_ujs
+//= require fancybox
 //= require twitter/bootstrap
 //= require carousel
 //= require sortable-thumb
 //= require navigation
 //= require alert
+//= require fancybox-init
+//= require set-header-color
 //= require turbolinks
 //= require_tree .
 //= require('browserslist');
 //= require browserslist
-
-$(document).ready(function() {
-  $("a.fancybox").fancybox();
-});
-
-
- 
 
