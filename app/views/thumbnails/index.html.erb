@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
   <div class="main-heading">
     <h1><%= @gallery.name %></h1>
     <% if user_signed_in? %>
@@ -8,4 +8,4 @@
 
   <%= render 'layouts/thumbnails', :locals => { :gallery => @gallery } %>
   
-</div>
+</section>
