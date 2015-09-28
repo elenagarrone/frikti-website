@@ -5,8 +5,9 @@
   @include fontsize(16);
   font-family: $lithosPro;
   position: fixed;
+  top: 0;
   width: 100%;
-  height: $headerHight;
+  height: $headerHeight;
   z-index: 1;
   background: transparent;
 
@@ -15,7 +16,7 @@
   }
 
   .navbar { 
-    height: $headerHight;
+    height: $headerHeight;
 
     .navbar-brand { 
       height: auto; 

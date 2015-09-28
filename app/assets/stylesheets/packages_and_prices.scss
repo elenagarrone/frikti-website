@@ -4,6 +4,16 @@
 @import "mixins";
 @import "variables";
 
+.background-image {
+  img {
+    position: fixed;
+    width: 100%;
+  }
+}
+
 .packages-and-prices {
-  background-image: url("_MG_0153");
+  top: 40em; 
+  position: relative;
+  background-color: $white;
+  margin-bottom: 20em;
 }

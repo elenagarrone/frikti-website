@@ -19,10 +19,17 @@
 @import "variables";
 @import "user";
 @import "header";
+@import "fancybox-custom";
+@import "footer";
 
 html, body {
   height: 100%;
   font-size: 16px;
+}
+
+.heading {
+  color: $pink;
+  font-family: $lithosPro;
 }
 
 a, a:hover { 
@@ -41,12 +48,6 @@ a, a:hover {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
-.container {
-  position: relative;
-  top: 110px;
-}
-
 
 .main-heading {
   margin: 10px 0;

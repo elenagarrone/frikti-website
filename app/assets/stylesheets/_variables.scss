@@ -1,13 +1,17 @@
 //FONT
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,700);
+@import "font-awesome";
 @font-face{
   font-family: "Lithos Pro";
   src: url("fonts/LithosPro-Regular.eot?#iefix");
-  src: url("fonts/LithosPro-Regular.eot?#iefix") format("eot"), url("fonts/LithosPro-Regular.otf") format("otf"), url("fonts/LithosPro-Regular.ttf") format("truetype");
+  src: url("fonts/LithosPro-Regular.eot?#iefix") format("eot"), url("fonts/LithosPro-Regular.otf") format("otf");
 }
 
 //PAGES
-$lithosPro: "Lithos Pro";
-$headerHight: 110px;
+$fontAwesome: 'FontAwesome';
+$fontRoboto: 'Roboto', 'Arial', sans-serif;
+$lithosPro: "Lithos Pro", 'Arial', sans-serif;
+$headerHeight: 110px;
 $textColor: #000;
 $pink: #FF1493;
 $white: #ffffff;
