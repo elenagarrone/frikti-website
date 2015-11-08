@@ -6,10 +6,39 @@ footer {
 
   &.visible {
     display: block;
-    background-color: yellow;
+    height: auto;
     width: 100%;
-    height: 100px;
     bottom: 0;
     position: absolute;
+    text-align: center;
+    padding: 20px 0 10px 0;
+  }
+
+  &.footer-brand {
+    display: block;
+  }
+
+  .social {
+    list-style: none;
+    padding: 10px 0 0 0;
+
+    li {
+      display: inline-block;
+
+      img {
+        margin: 0px 16px;
+      }
+    }
+  }
+
+  p {
+    @include fontsize(11);
+    color: $greyColor;
+    padding: 10px; 
+    margin: 0;
+
+    a {
+      color: inherit;
+    }
   }
 }
