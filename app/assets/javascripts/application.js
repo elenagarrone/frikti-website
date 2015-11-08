@@ -21,8 +21,8 @@
 //= require alert
 //= require fancybox-init
 //= require set-header-color
+//= require set-footer-visibility
 //= require turbolinks
 //= require_tree .
 //= require('browserslist');
 //= require browserslist
-

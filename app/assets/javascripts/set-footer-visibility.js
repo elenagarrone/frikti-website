@@ -4,6 +4,6 @@ $(function(){
   var path2 = "/homepage";
 
   if((pathname !== path) && (pathname !== path2)) {
-    $('.header').toggleClass('add-color');
-  }
+    $('footer').toggleClass('visible');
+  } 
 });

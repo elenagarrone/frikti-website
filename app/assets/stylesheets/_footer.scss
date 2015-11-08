@@ -2,7 +2,14 @@
 @import "variables";
 
 footer {
-  background-color: yellow;
-  width: 100%;
-  height: 100px;
+  display: none;
+
+  &.visible {
+    display: block;
+    background-color: yellow;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    position: absolute;
+  }
 }
