@@ -4,5 +4,5 @@ $(function(){
 
   if(pathname === path) {
     $('.footer.visible').toggleClass('relative');
-  }
+  } 
 });

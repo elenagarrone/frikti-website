@@ -4,13 +4,6 @@
 @import "mixins";
 @import "variables";
 
-.footer {
-  &.visible {
-    &.relative {
-      position: relative;
-    }
-  }
-}
 
 .image-background {
   background: url(image_path('_MG_0153(2).jpg' )) no-repeat fixed;

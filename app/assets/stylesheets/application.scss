@@ -33,6 +33,14 @@ html, body {
   text-transform: uppercase;
 }
 
+.footer {
+  &.visible {
+    &.relative {
+      position: relative;
+    }
+  }
+}
+
 a, a:hover { 
   color: $textColor; 
 }

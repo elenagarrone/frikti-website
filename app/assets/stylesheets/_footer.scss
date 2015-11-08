@@ -9,10 +9,16 @@ footer {
     height: auto;
     width: 100%;
     bottom: 0;
-    position: absolute;
+    position: fixed;
     text-align: center;
     padding: 20px 0 10px 0;
+    background: $white;
+
+    &.relative {
+      position: relative;
+    }
   }
+
 
   &.container-fluid {
     margin-top: 0;
