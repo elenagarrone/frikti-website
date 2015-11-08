@@ -6,7 +6,9 @@
 
 .footer {
   &.visible {
-    position: relative;
+    &.relative {
+      position: relative;
+    }
   }
 }
 
@@ -22,7 +24,12 @@
   font-family: $fontRoboto;
   font-weight: 200;
   color: $darkGreyColor;
-  margin-top: 25px;
+  margin: 25px 0;
+
+  .main-line {
+    @include fontsize(20);
+    font-style: italic;
+  }
 
   h2 {
     @include fontsize(22);
