@@ -17,4 +17,40 @@
   height: 600px;
 }
 
+.content {
+  @include fontsize(18);
+  font-family: $fontRoboto;
+  font-weight: 200;
+  color: $darkGreyColor;
+  margin-top: 25px;
 
+  h2 {
+    @include fontsize(22);
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 30px;
+
+    h3 {
+      @include fontsize(16);
+      font-family: $lithosPro;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    li {
+      &:before {
+        @include fontsize(16);
+        font-family: $fontAwesome;
+        content: "\f00c";
+        color: $pink;
+        margin: 0 6px 0 10px;
+      }
+    }
+  }
+
+  a {
+    font-weight: 300;
+  }
+}
