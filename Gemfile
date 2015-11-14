@@ -37,6 +37,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'fancybox2-rails'
 gem 'acts_as_list'
 gem "font-awesome-rails"
+gem "rails_12factor"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
