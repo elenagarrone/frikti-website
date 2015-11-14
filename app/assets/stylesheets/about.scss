@@ -1,6 +1,9 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixins";
+@import "variables";
+
 
 .about {
   img {
@@ -9,5 +12,11 @@
 
   .column {
     margin-top: 20px;
+  }
+
+  p {
+    @include fontsize(18);
+    font-family: $fontRoboto;
+    font-weight: 200;
   }
 }
