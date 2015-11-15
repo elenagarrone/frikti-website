@@ -9,7 +9,7 @@ footer {
     height: auto;
     width: 100%;
     bottom: 0;
-    position: absolute;
+    position: relative;
     text-align: center;
     padding: 20px 0 10px 0;
     background: $white;
@@ -27,6 +27,7 @@ footer {
   .social {
     list-style: none;
     padding: 10px 0 0 0;
+    display: inline-block;
 
     li {
       display: inline-block;
@@ -35,6 +36,10 @@ footer {
         margin: 0px 16px;
       }
     }
+  }
+
+  .footer-brand img {
+    width: 150px;
   }
 
   p {

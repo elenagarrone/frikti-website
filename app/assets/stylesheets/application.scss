@@ -28,8 +28,8 @@ html, body {
 }
 
 .heading {
-  color: $pink;
-  font-family: $lithosPro;
+  color: $headingColour;
+  font-family: $playfair;
   text-transform: uppercase;
 }
 
@@ -39,6 +39,16 @@ a, a:hover {
 
 .container-fluid {
   margin-top: $headerHeight;
+}
+
+.carousel-indicators {
+  li {
+    border: 1px solid $greyWhiteText;
+
+    &.active {
+      background-color: $greyWhiteText;
+    }
+  }
 }
 
 .alert {

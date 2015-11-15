@@ -3,7 +3,7 @@
 
 .header {
   @include fontsize(16);
-  font-family: $lithosPro;
+  font-family: $playfair;
   position: fixed;
   top: 0;
   width: 100%;
@@ -27,14 +27,18 @@
     .navigation {
 
       .nav-links-list {
-        padding: 2.5em 2em;
+        padding: 4.5em 2em;
         margin: 0;
-        color: $textColor;
 
         li {
           display: inline;
           text-transform: uppercase;
           list-style: none;
+          margin-right: 25px;
+          
+          a {
+            color: $greyWhiteText;
+          }
 
           &:first-child {
             &:before {
@@ -42,14 +46,8 @@
             }
           }
 
-          &:before {
-            content: "/";
-            color: $pink;
-            padding: 0 15px;
-          }
-
           .current {
-            color: $pink;
+            color: $headingColour;
           }
 
           .page_link { 
@@ -57,7 +55,7 @@
 
             &:hover, &:active, &:focus {
               transition: color .2s ease-in;
-              color: $pink;
+              color: $headingColour;
             }
           }
         }

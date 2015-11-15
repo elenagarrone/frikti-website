@@ -34,7 +34,7 @@
 
     h3 {
       @include fontsize(16);
-      font-family: $lithosPro;
+      font-family: $playfair;
       text-transform: uppercase;
       margin-bottom: 5px;
     }
@@ -44,7 +44,7 @@
         @include fontsize(16);
         font-family: $fontAwesome;
         content: "\f00c";
-        color: $pink;
+        color: $headingColour;
         margin: 0 6px 0 10px;
       }
     }

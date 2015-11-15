@@ -1,5 +1,7 @@
 //FONT
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,700);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic);
+
 @import "font-awesome";
 @font-face{
   font-family: "Lithos Pro";
@@ -11,14 +13,17 @@
 $fontAwesome: 'FontAwesome';
 $fontRoboto: 'Roboto', 'Arial', sans-serif;
 $lithosPro: "Lithos Pro", 'Arial', sans-serif;
-$headerHeight: 110px;
+$playfair: 'Playfair Display', 'Times new roman', serif;
+$headerHeight: 170px;
 $textColor: #000;
-$pink: #FF1493;
+$headingColour: #755E37;
 $white: #ffffff;
 $mainColor: #A72BA3;
 $greyColor: #c0c0c0;
 $darkGreyColor: #484848;
 $autofillBackground: #FAE6FB;
+$greyLogoColour: #353535;
+$greyWhiteText: #B7B0AB;
 
 //== Media queries breakpoints
 //
