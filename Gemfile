@@ -38,7 +38,6 @@ gem 'fancybox2-rails'
 gem 'acts_as_list'
 gem "font-awesome-rails"
 gem "rails_12factor"
-gem 'picturefill-rails', '~> 0.2.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="main-heading">
-    <h1>Portfolio</h1>
+    <!-- <h1>Portfolio</h1> -->
     <% if user_signed_in? %>
       <%= link_to "New Gallery", new_gallery_path, :class => "new_gallery btn btn-success pull-right" %>
     <% end %>
@@ -8,7 +8,8 @@
 
   <% @galleries.each do |gallery| %> 
     <div class="gallery">
-      <h2><%= link_to "#{gallery.name}", gallery_path(:id => gallery.friendly_id)%></h2>
+      <h1 class="heading"><%= gallery.name %></h1>
+      <!-- <h1 class="heading"><%= link_to "#{gallery.name}", gallery_path(:id => gallery.friendly_id)%></h1> -->
       <% if user_signed_in? %>
         <div class="options">
           <%= link_to "Delete #{gallery.name}", gallery_path(:id => gallery.id), method: :delete, :class => "delete_gallery btn btn-danger" %>

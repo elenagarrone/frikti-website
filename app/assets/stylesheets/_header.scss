@@ -37,7 +37,7 @@
           margin-right: 25px;
           
           a {
-            color: $greyWhiteText;
+            color: $headingColour;
           }
 
           &:first-child {
@@ -47,7 +47,7 @@
           }
 
           .current {
-            color: $headingColour;
+            color: $greyLogoColour;
           }
 
           .page_link { 
@@ -55,7 +55,7 @@
 
             &:hover, &:active, &:focus {
               transition: color .2s ease-in;
-              color: $headingColour;
+              color: $greyLogoColour;
             }
           }
         }

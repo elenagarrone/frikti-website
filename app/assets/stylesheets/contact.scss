@@ -4,6 +4,18 @@
 @import "variables";
 
 .contact-form {
+  position: absolute;
+  top: 300px;
+  width: 100%;
+  text-align: -webkit-center;
+}
+
+.contact-img {
   position: relative;
-  top: $headerHeight;
+  opacity: 0.6;
+  filter: alpha(opacity=40);
+}
+
+.info-contact {
+  width: 25%;
 }

@@ -10,7 +10,16 @@
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-6">
-      <%= image_tag("frikti.jpg") %>
+      <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <source srcset='<%= image_url('about-large-screen.jpg') %>' media="(min-width: 1350px)">
+        <source srcset='<%= image_url('about-medium-screen.jpg') %>' media="(min-width: 992px)">
+        <source srcset="<%= image_url('about-large-screen.jpg') %>" media="(min-width: 768px)">
+        <source srcset="<%= image_url('about-medium-screen.jpg') %>" media="(min-width: 480px)">
+        <source srcset="<%= image_url('about-small-screen.jpg') %>" media="(min-width: 200px)"> 
+    <!--[if IE 9]></video><![endif]-->
+        <img class="rs-img" srcset="<%= image_url('about-small-screen.jpg') %>" alt="">
+      </picture>
     </div>
   </div>
 </div>

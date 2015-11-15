@@ -31,6 +31,14 @@ html, body {
   color: $headingColour;
   font-family: $playfair;
   text-transform: uppercase;
+
+  a {
+    color: $headingColour;
+  }
+}
+
+.rs-img {
+  width: 100%;
 }
 
 a, a:hover { 
@@ -43,10 +51,10 @@ a, a:hover {
 
 .carousel-indicators {
   li {
-    border: 1px solid $greyWhiteText;
+    border: 1px solid $headingColour;
 
     &.active {
-      background-color: $greyWhiteText;
+      background-color: $headingColour;
     }
   }
 }

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery-ui.min
 //= require jquery_ujs
+//= require picturefill
 //= require fancybox
 //= require twitter/bootstrap
 //= require carousel
