@@ -5,11 +5,6 @@
 @import "variables";
 
 .packages-prices {
-  .image-background {
-    background: url(//s3-eu-west-1.amazonaws.com/frikti/assets/packages-and-prices/bridesmate.jpg) no-repeat;
-    background-size: 100% auto;
-    height: 600px;
-  }
 
   .content {
     @include fontsize(18);
@@ -65,5 +60,6 @@
     font-weight: 500;
     font-style: italic;
     margin-bottom: 20px;
+    padding-right: 30px;
   }
 }
