@@ -36,7 +36,7 @@
       position: relative;
 
       @include breakpoint(sm) {
-        position: static;
+        position: inherit;
         float: right;
       }
 
@@ -49,8 +49,11 @@
         width: 100%;
 
         @include breakpoint(sm) {
+          display: block;
           padding: 4.5em 2em;
           position: inherit;
+          width: inherit;
+          top: inherit;
         }
 
         &.active {
@@ -63,16 +66,20 @@
           list-style: none;
           border-bottom: 1px solid $mainColor;
 
-          &:first-child {
-            border-top: 1px solid $mainColor;
-          }
-
           @include breakpoint(sm) {
             display: inline;
             margin-right: 25px;
             border: 0;
           }
-          
+
+          &:first-child {
+            border-top: 1px solid $mainColor;
+
+            @include breakpoint(sm) {
+              border: 0;
+            }
+          }
+
           a {
             color: $headingColour;
             display: block;
@@ -80,7 +87,9 @@
             padding: 10px 15px;
 
             @include breakpoint(sm) {
+              display: inherit;
               padding: inherit;
+              background-color: inherit;
             }
           }
 
