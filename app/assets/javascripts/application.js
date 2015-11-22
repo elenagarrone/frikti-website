@@ -28,3 +28,8 @@
 //= require_tree .
 //= require('browserslist');
 //= require browserslist
+
+$("#nav-toggle").on( "click", function() {
+  $(this).toggleClass( "active" );
+  $('.nav-links-list').toggleClass( "active" );
+});
