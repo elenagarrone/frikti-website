@@ -19,4 +19,25 @@
     font-family: $fontRoboto;
     font-weight: 200;
   }
+
+  .signature {
+    font-family: $sacramento;
+    font-style: italic;
+    position: relative;
+
+    .name {
+      @include fontsize(40);
+      display: block;
+      position: absolute;
+      right: 25px;
+    }
+
+    .kisses {
+      @include fontsize(22);
+      font-family: $allura;
+      position: absolute;
+      right: 0;
+      top: 45px;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 //FONT
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,700);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Sacramento|Allura);
 
 @import "font-awesome";
 @font-face{
@@ -13,7 +14,9 @@
 $fontAwesome: 'FontAwesome';
 $fontRoboto: 'Roboto', 'Arial', sans-serif;
 $lithosPro: "Lithos Pro", 'Arial', sans-serif;
-$playfair: 'Playfair Display', 'Times new roman', serif;
+$sacramento: 'Sacramento', 'Times New Roman', cursive;
+$allura: 'Allura', 'Times New Roman', cursive;
+$playfair: 'Playfair Display', 'Times New Roman', serif;
 $headerHeight: 170px;
 $textColor: #000;
 $headingColour: #755E37;
