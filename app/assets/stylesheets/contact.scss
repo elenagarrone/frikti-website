@@ -2,20 +2,72 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
+@import "mixins";
 
-.contact-form {
-  position: absolute;
-  top: 300px;
-  width: 100%;
-  text-align: -webkit-center;
-}
-
-.contact-img {
+.contact { 
+  font-family: $fontRoboto;
+  font-weight: 100;
   position: relative;
-  opacity: 0.6;
-  filter: alpha(opacity=40);
-}
 
-.info-contact {
-  width: 25%;
+  .info-contact p {
+    @include breakpoint(sm) {
+      color: $white;
+    }
+  }
+
+  .contact-form {
+    margin-bottom: 15px;
+
+    @include breakpoint(sm) {
+      margin-bottom: 0;
+      position: absolute;
+      z-index: 100;
+      width: 30%;
+    }
+
+    @include breakpoint(md) {
+      top: 9%;
+    }
+
+    @include breakpoint(lg) {
+      top: 15%;
+    }
+  }
+
+  .contact-img {
+    position: relative;
+    // opacity: 0.6;
+    // filter: alpha(opacity=40);
+  }
+
+  .user {
+    textarea {
+      height: 90px;
+    }
+
+    input {
+      width: 100%;
+
+      @include breakpoint(lg) {
+        width: 70%;
+      }
+    }
+
+    .btn {
+      border-radius: 0;
+      width: 28%;
+      font-weight: 100;
+      min-width: 115px;
+      
+      &:hover {
+        font-weight: normal;
+      }
+    }
+
+    a {
+      @include breakpoint(sm) {
+        color: $white;
+      }
+    }
+  }
 }

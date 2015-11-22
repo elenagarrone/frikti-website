@@ -41,8 +41,14 @@ html, body {
   width: 100%;
 }
 
-a, a:hover { 
+a { 
   color: $textColor; 
+  text-decoration: none;
+
+  &:hover {
+    color: $mainColor;
+    text-decoration: underline;
+  }
 }
 
 .container-fluid {
