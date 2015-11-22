@@ -27,7 +27,11 @@
   ul {
     list-style: none;
     margin-bottom: 15px;
-    padding-left: 15px;
+    padding-left: 0;
+    
+    @include breakpoint(sm) {
+      padding-left: 15px;
+    }
   }
 
   li {
@@ -47,11 +51,15 @@
   }
 
   .package {
-    padding-left: 15px;
+    @include breakpoint(sm) {
+      padding-left: 15px;
+    }
   }
 
   .additional {
-    padding-left: 15px;
+    @include breakpoint(sm) {
+      padding-left: 15px;
+    }
   }
 
   .price {
