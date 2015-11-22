@@ -28,18 +28,20 @@
 
   .signature {
     font-family: $sacramento;
+    font-weight: bold;
     font-style: italic;
     position: relative;
+    margin-top: 25px;
 
     .name {
-      @include fontsize(40);
+      @include fontsize(45);
       display: block;
       position: absolute;
       right: 25px;
     }
 
     .kisses {
-      @include fontsize(22);
+      @include fontsize(25);
       font-family: $allura;
       position: absolute;
       right: 0;
