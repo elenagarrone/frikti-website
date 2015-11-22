@@ -9,6 +9,16 @@
   font-weight: 100;
   position: relative;
 
+  h1 {
+    @include breakpoint(sm) {
+      margin-top: 10px;
+    }
+
+    @include breakpoint(md) {
+      margin-top: inherit;
+    }
+  }
+
   .info-contact p {
     @include breakpoint(sm) {
       color: $white;

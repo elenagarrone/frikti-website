@@ -11,7 +11,7 @@
   z-index: 1;
   background: transparent;
 
-  @include breakpoint(md) {
+  @include breakpoint(sm) {
     height: $headerHeight;
   }
 
@@ -23,7 +23,7 @@
   .navbar { 
     height: 110px;
 
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       height: $headerHeight;
     }
 
