@@ -4,24 +4,25 @@
 @import "mixins";
 @import "variables";
 
+.packages-prices {
+  .image-background {
+    background: url(https://s3-eu-west-1.amazonaws.com/frikti/assets/packages-and-prices/bridesmate.jpg) no-repeat;
+    background-size: 100% auto;
+    height: 600px;
+  }
 
-.image-background {
-  background: url(https://s3-eu-west-1.amazonaws.com/frikti/assets/packages-and-prices/bridesmate.jpg) no-repeat fixed;
-  background-size: 100% auto;
-  background-position: 0 110px;
-  height: 600px;
-}
-
-.content {
-  @include fontsize(18);
-  font-family: $fontRoboto;
-  font-weight: 200;
-  color: $darkGreyColor;
-  margin: 25px 0;
+  .content {
+    @include fontsize(18);
+    font-family: $fontRoboto;
+    font-weight: 200;
+    color: $darkGreyColor;
+    margin: 25px 0;
+  }
 
   .main-line {
     @include fontsize(20);
     font-style: italic;
+    margin-bottom: 40px;
   }
 
   h2 {
@@ -31,26 +32,37 @@
   ul {
     list-style: none;
     margin-bottom: 30px;
+    padding-left: 15px;
+  }
 
-    h3 {
+  li {
+    margin-top: 5px;
+
+    &:before {
       @include fontsize(16);
-      font-family: $playfair;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-
-    li {
-      &:before {
-        @include fontsize(16);
-        font-family: $fontAwesome;
-        content: "\f00c";
-        color: $headingColour;
-        margin: 0 6px 0 10px;
-      }
+      font-family: $fontAwesome;
+      content: "\f00c";
+      color: $headingColour;
+      margin: 0 6px 0 10px;
     }
   }
 
   a {
     font-weight: 300;
+  }
+
+  .package {
+    padding-left: 15px;
+  }
+
+  .additional {
+    padding-left: 15px;
+  }
+
+  .price {
+    @include fontsize(20);
+    text-align: right;
+    font-weight: 500;
+    font-style: italic;
   }
 }
