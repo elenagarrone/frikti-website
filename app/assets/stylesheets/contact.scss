@@ -19,9 +19,18 @@
     }
   }
 
-  .info-contact p {
-    @include breakpoint(sm) {
-      color: $white;
+  .info-contact {
+    p {
+      @include breakpoint(sm) {
+        color: $white;
+      }
+    }
+
+    .phone {
+      text-decoration: none;
+      @include breakpoint(sm) {
+        color: $white;
+      }
     }
   }
 

@@ -2,7 +2,7 @@
     <div class="user contact-form col-sm-offset-1 col-sm-4" id='contact'>
       <h1 class="heading">Contact</h1>
       <div class="info-contact">
-        <p>Tel: 07725911807</p>
+        <p>Tel: <a  class="phone" href="tel:+4407725911807">0772 591 1807</a></p>
 
         <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
           <%= f.input :name, :required => true, placeholder: "Name" %><br>
@@ -20,7 +20,7 @@
       <source srcset="//s3-eu-west-1.amazonaws.com/frikti/assets/contact-us/contact.jpg" media="(min-width: 768px)">
       <source srcset="//s3-eu-west-1.amazonaws.com/frikti/assets/contact-us/contact-small-screen.jpg" media="(min-width: 480px)">
     <!--[if IE 9]></video><![endif]-->
-      <img class="contact-img rs-img" srcset="<%= image_url('contact-small-screen.jpg') %>" >
+      <img class="contact-img rs-img" srcset="//s3-eu-west-1.amazonaws.com/frikti/assets/contact-us/contact-small-screen.jpg" >
     </picture>
 
 

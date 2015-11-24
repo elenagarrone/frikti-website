@@ -32,4 +32,5 @@
 $("#nav-toggle").on( "click", function() {
   $(this).toggleClass( "active" );
   $('.nav-links-list').toggleClass( "active" );
+  $('.header').toggleClass( "active" );
 });
