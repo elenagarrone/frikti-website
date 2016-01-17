@@ -21,8 +21,6 @@
 //= require navigation
 //= require alert
 //= require fancybox-init
-//= require set-footer-visibility
-//= require set-footer-position
 //= require turbolinks
 //= require_tree .
 //= require('browserslist');
