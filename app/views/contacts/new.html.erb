@@ -1,3 +1,13 @@
+<div class="header header-color">
+  <%= render :partial => 'layouts/navbar' %>
+</div>
+
+<% if notice %>
+  <div class="alert">
+    <%= notice %>
+  </div>
+<% end %>
+
 <div class="contact container-fluid">
     <div class="user contact-form col-sm-offset-1 col-sm-4" id='contact'>
       <h1 class="heading">Contact</h1>
@@ -22,6 +32,4 @@
     <!--[if IE 9]></video><![endif]-->
       <img class="contact-img rs-img" srcset="<%= image_url('contact-small-screen.jpg') %>" >
     </picture>
-
-
 </div>

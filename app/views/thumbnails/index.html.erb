@@ -1,4 +1,14 @@
-<section class="container-fluid">
+<div class="header header-color">
+  <%= render :partial => 'layouts/navbar' %>
+</div>
+
+<% if notice %>
+  <div class="alert">
+    <%= notice %>
+  </div>
+<% end %>
+
+<div class="container-fluid">
   <div class="main-heading">
     <h1><%= @gallery.name %></h1>
     <% if user_signed_in? %>
@@ -8,4 +18,4 @@
 
   <%= render 'layouts/thumbnails', :locals => { :gallery => @gallery } %>
   
-</section>
+</div>
