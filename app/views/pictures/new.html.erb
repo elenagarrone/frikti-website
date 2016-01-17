@@ -1,6 +1,18 @@
-<section class="container-fluid">
+<div class="header header-color">
+  <%= render :partial => 'layouts/navbar' %>
+</div>
+
+<% if notice %>
+  <div class="alert">
+    <%= notice %>
+  </div>
+<% end %>
+
+<div class="container-fluid">
   <% if user_signed_in? %>
     <h1>Add a picture</h1>
     <%= render 'form_picture' %>
   <% end %>
-</section>
+</div>
+
+<%= render :partial =>'layouts/footer', locals: {visible: "visible"}%>
