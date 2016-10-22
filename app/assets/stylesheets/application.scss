@@ -10,7 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require jquery-ui.min 
+ *= require jquery-ui.min
  *= require_tree .
  *= require_self
  *= require fancybox
@@ -45,8 +45,8 @@ html, body {
   width: 100%;
 }
 
-a { 
-  color: $textColor; 
+a {
+  color: $textColor;
   text-decoration: none;
 
   &:hover {
@@ -126,6 +126,3 @@ a {
     }
   }
 }
-
-
-

@@ -8,17 +8,24 @@
         <!--[if IE 9]></video><![endif]-->
           <img class="contact-img rs-img" srcset="//s3-eu-west-1.amazonaws.com/frikti/assets/icons-and-logo/logo-1-small-screen.png" >
       </picture>
-    
+
     </a>
   </div>
   <a id="nav-toggle" class="hidden-sm hidden-md hidden-lg" href="#"><span></span></a>
   <div class="navigation">
     <ul class="nav-links-list">
       <li>
-        <%= link_to "Portfolio", galleries_path, :class => "page_link" %>
+        <%= link_to "Portfolio", galleries_path, :class => "page_link dropdown_btn" %>
+        <ul class="curtain">
+          <li>hello</li>
+          <li>hello2</li>
+        </ul>
       </li>
       <li>
-        <%= link_to "Packages & Prices", packages_and_prices_path, :class => "page_link" %>
+        <%= link_to "Packages & Prices", packages_and_prices_path, :class => "page_link"%>
+      </li>
+      <li>
+        <a href="https://krisjphotographyuk.blogspot.co.uk" class="page_link">Blog</a>
       </li>
       <li>
         <%= link_to "About", about_index_path, :class => "page_link" %>
