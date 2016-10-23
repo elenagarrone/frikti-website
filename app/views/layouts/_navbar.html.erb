@@ -14,13 +14,20 @@
   <a id="nav-toggle" class="hidden-sm hidden-md hidden-lg" href="#"><span></span></a>
   <div class="navigation">
     <ul class="nav-links-list">
-      <li>
-        <%= link_to "Portfolio", galleries_path, :class => "page_link dropdown_btn" %>
-        <ul class="curtain">
-          <li>hello</li>
-          <li>hello2</li>
-        </ul>
-      </li>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to "Portfolio", galleries_path, :class => "page_link" %>
+        <li>
+      <% else %>
+        <li class="has-submenu">
+          <%= link_to "Portfolio", galleries_path, :class => "page_link" %>
+          <ul class="curtain">
+            <% @galleries.each do |gallery| %>
+              <li class="curtain_li"><%= link_to "#{gallery.name}", gallery_path(:id => gallery.id) %></li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
       <li>
         <%= link_to "Packages & Prices", packages_and_prices_path, :class => "page_link"%>
       </li>

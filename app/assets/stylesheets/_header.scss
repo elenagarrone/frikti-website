@@ -24,7 +24,7 @@
     background-color: white;
   }
 
-  .navbar { 
+  .navbar {
     height: 110px;
     border: 0;
 
@@ -32,8 +32,8 @@
       height: $headerHeight;
     }
 
-    .navbar-brand { 
-      height: auto; 
+    .navbar-brand {
+      height: auto;
       padding: 15px 20px;
     }
 
@@ -66,6 +66,12 @@
           z-index: 10;
         }
 
+        > li {
+          @include breakpoint(sm) {
+            margin-right: 25px;
+          }
+        }
+
         li {
           text-transform: uppercase;
           list-style: none;
@@ -73,7 +79,6 @@
 
           @include breakpoint(sm) {
             display: inline;
-            margin-right: 25px;
             border: 0;
           }
 
@@ -85,11 +90,14 @@
             }
           }
 
-          a {
+          a, button {
             color: $headingColour;
             display: block;
             background-color: $white;
             padding: 10px 15px;
+            border: 0;
+            text-transform: uppercase;
+            appearance: none;
 
             @include breakpoint(sm) {
               display: inherit;
@@ -104,14 +112,20 @@
             }
           }
 
-          .current {
-            color: $greyLogoColour;
+          &.current {
+            .page_link {
+              color: $greyLogoColour;
+              &:after {
+                color: $greyLogoColour;
+              }
+            }
           }
 
-          .page_link { 
-            text-decoration: none; 
+          .page_link {
+            text-decoration: none;
 
             &:hover, &:active, &:focus {
+              outline: 0;
               transition: color .2s ease-in;
               color: $greyLogoColour;
             }
@@ -138,7 +152,7 @@
       right: 0px;
     }
     #nav-toggle span:after {
-      top: -12px; 
+      top: -12px;
       right: 0;
     }
     #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {

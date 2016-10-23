@@ -12,11 +12,10 @@
   <div class="main-heading">
     <h1><%= @gallery.name %></h1>
     <% if user_signed_in? %>
-    <h1>show</h1>
       <%= link_to "Add picture", new_gallery_thumbnail_path(@gallery), :class => "new_picture btn btn-success pull-right" %>
     <% end %>
   </div>
-    
+
   <%= render 'layouts/thumbnails', :locals => { :gallery => @gallery } %>
 
 </div>

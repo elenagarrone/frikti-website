@@ -33,18 +33,21 @@ $("#nav-toggle").on( "click", function() {
 });
 
 (function(){
-  var activeClass = 'is_active'
-  var dropdownBtnClass = '.dropdown_btn';
-  var $instances = $(dropdownBtnClass);
+  var activeClass = 'is_active';
+  var listClass = 'has-submenu';
+  var dropdownBtnClass = 'dropdown_btn';
+  var target = $('.' + listClass).find('a');
+  var $instances = $(target);
   $instances.each(function(i, el){
     var index = i;
     var $el = $(el);
     var text = $el.text();
-    var $listItem = $($el.closest('li'));
+    var btnClass = $el.attr('class');
+    var $listItem = $($el.closest('.' + listClass));
     $listItem.attr({'id': 'dropdown_menu_' + i, 'class': 'dropdown_menu'});
-    $listItem.find('a').remove();
-    $listItem.prepend('<button role="button" id="ddbutton_' + i +'" class="dropdown_btn">' + text + '</button>');
-    $listItem.on('click', dropdownBtnClass, function(){
+    $listItem.find('> a').remove();
+    $listItem.prepend('<button role="button" id="ddbutton_' + i +'" class="' + dropdownBtnClass + ' ' + btnClass + '">' + text + '</button>');
+    $listItem.on('click', '.' + dropdownBtnClass, function(){
       var $this = $(this);
       $this.closest('li').toggleClass(activeClass);
     });

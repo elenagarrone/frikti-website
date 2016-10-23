@@ -1,23 +1,71 @@
+@import "mixins";
+@import "variables";
+
 .nav-links-list li {
+  @include breakpoint(sm) {
     float: left;
+  }
 }
 
-.dropdown_menu {
-  position: relative;
+.header .navbar .navigation .nav-links-list .dropdown_menu {
+  @include breakpoint(sm) {
+    position: relative;
+  }
+  .dropdown_btn {
+    &:hover, &:active, &:focus {
+      &:after {
+        transition: color .2s ease-in;
+        color: $greyLogoColour;
+      }
+    }
+    &:after {
+      @include breakpoint(sm) {
+        font-family: "FontAwesome";
+        content: "\f078";
+        color: $mainColor;
+        margin-left: 5px;
+        position: relative;
+        bottom: 1px;
+      }
+    }
+  }
+
   .curtain {
     display: none;
-    position: absolute;
-    padding: 0;
-    background-color: white;
-    box-shadow: 1px 1px 4px rgba(116, 94, 58, 0.21);
+    @include breakpoint(sm) {
+      margin-top: 5px;
+      position: absolute;
+      padding: 0;
+      background-color: $white;
+      box-shadow: 1px 1px 4px $mainColorOpac;
+      min-width: 200px;
+    }
 
-    li {
-      min-width: 100px;
-      padding: 5px;
-      border-top: 1px solid rgba(116, 94, 58, 0.21);
+    > li {
+      @include breakpoint(sm) {
+        width: 100%;
+        margin-right: 0;
+      }
+      &:first-child > a {
+        border: 0;
+      }
+
+      > a {
+        @include breakpoint(sm) {
+          padding: 8px 10px 8px 10px;
+          border-top: 1px solid $mainColorOpac;
+        }
+      }
     }
   }
   &.is_active {
+    .dropdown_btn {
+      &:after {
+        @include breakpoint(sm) {
+          content: "\f077";
+        }
+      }
+    }
     .curtain {
       display: block;
     }

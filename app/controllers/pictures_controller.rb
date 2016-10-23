@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
 
-  def new 
+  def new
     @gallery = Gallery.friendly.find(params[:gallery_id])
     @thumbnail = Thumbnail.find(params[:thumbnail_id])
     @picture = Picture.new
