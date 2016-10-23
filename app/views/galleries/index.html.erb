@@ -16,7 +16,7 @@
     <% end %>
   </div>
 
-  <% @galleries.each do |gallery| %> 
+  <% @galleries.each do |gallery| %>
     <div class="gallery">
       <h1 class="heading"><%= gallery.name %></h1>
       <!-- <h1 class="heading"><%= link_to "#{gallery.name}", gallery_path(:id => gallery.friendly_id)%></h1> -->
@@ -34,4 +34,4 @@
   <% end %>
 </div>
 
-<%= render :partial =>'layouts/footer', locals: {visible: "visible"}%>
+<%= render :partial =>'layouts/footer'%>

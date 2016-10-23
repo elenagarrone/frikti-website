@@ -2,18 +2,14 @@
 @import "variables";
 
 footer {
-  display: none;
-
-  &.visible {
-    display: block;
-    height: auto;
-    width: 100%;
-    bottom: 0;
-    position: relative;
-    text-align: center;
-    padding: 20px 0 10px 0;
-    background: $white;
-  }
+  display: block;
+  height: auto;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  text-align: center;
+  padding: 20px 0 10px 0;
+  background: $white;
 
 
   &.container-fluid {
@@ -27,9 +23,18 @@ footer {
 
     li {
       display: inline-block;
+      a {
+        display: block;
+        padding-top: 10px;
+        cursor: pointer;
+      }
 
       img {
         margin: 0px 16px;
+        width: 45px;
+        position: relative;
+        bottom: 8px;
+        opacity: 0.9;
       }
     }
   }
@@ -41,11 +46,25 @@ footer {
   p {
     @include fontsize(11);
     color: $greyColor;
-    padding: 10px; 
+    padding: 10px;
     margin: 0;
 
     a {
       color: inherit;
+    }
+  }
+}
+
+.carousel {
+  position: relative;
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+
+    p, .footer-brand {
+      display: none;
     }
   }
 }
