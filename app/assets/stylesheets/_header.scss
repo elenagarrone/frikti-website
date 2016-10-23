@@ -11,7 +11,7 @@
   z-index: 1;
   background: transparent;
 
-  @include breakpoint(sm) {
+  @media (min-width: 810px) {
     height: $headerHeight;
   }
 
@@ -27,8 +27,9 @@
   .navbar {
     height: 110px;
     border: 0;
+    position: relative;
 
-    @include breakpoint(sm) {
+    @media (min-width: 810px) {
       height: $headerHeight;
     }
 
@@ -40,7 +41,7 @@
     .navigation {
       position: relative;
 
-      @include breakpoint(sm) {
+      @media (min-width: 810px) {
         position: inherit;
         float: right;
       }
@@ -53,7 +54,7 @@
         top: 110px;
         width: 100%;
 
-        @include breakpoint(sm) {
+        @media (min-width: 810px) {
           display: block;
           padding: 4.5em 2em;
           position: inherit;
@@ -67,8 +68,13 @@
         }
 
         > li {
-          @include breakpoint(sm) {
+          @media (min-width: 810px) {
             margin-right: 25px;
+          }
+
+          > button {
+            width: 100%;
+            text-align: left;
           }
         }
 
@@ -77,7 +83,7 @@
           list-style: none;
           border-bottom: 1px solid $mainColor;
 
-          @include breakpoint(sm) {
+          @media (min-width: 810px) {
             display: inline;
             border: 0;
           }
@@ -85,7 +91,7 @@
           &:first-child {
             border-top: 1px solid $mainColor;
 
-            @include breakpoint(sm) {
+            @media (min-width: 810px) {
               border: 0;
             }
           }
@@ -99,7 +105,7 @@
             text-transform: uppercase;
             appearance: none;
 
-            @include breakpoint(sm) {
+            @media (min-width: 810px) {
               display: inherit;
               padding: inherit;
               background-color: inherit;
@@ -134,6 +140,18 @@
       }
     }
 
+    #nav-toggle {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 25px;
+      padding: 25px;
+
+      @media (min-width: 810px) {
+        display: none;
+      }
+    }
+
     #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
       cursor: pointer;
       border-radius: 1px;
@@ -143,8 +161,7 @@
       position: absolute;
       display: block;
       content: '';
-      top: 52px;
-      right: 35px;
+      right: 7px;
       z-index: 100;
     }
     #nav-toggle span:before {

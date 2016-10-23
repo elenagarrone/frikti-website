@@ -2,15 +2,14 @@
 @import "variables";
 
 .nav-links-list li {
-  @include breakpoint(sm) {
+  @media (min-width: 810px) {
     float: left;
   }
 }
 
 .header .navbar .navigation .nav-links-list .dropdown_menu {
-  @include breakpoint(sm) {
-    position: relative;
-  }
+  position: relative;
+
   .dropdown_btn {
     &:hover, &:active, &:focus {
       &:after {
@@ -19,20 +18,25 @@
       }
     }
     &:after {
-      @include breakpoint(sm) {
-        font-family: "FontAwesome";
+      font-family: "FontAwesome";
+      content: "\f067";
+      color: $mainColor;
+      position: absolute;
+      right: 15px;
+      @media (min-width: 810px) {
         content: "\f078";
-        color: $mainColor;
         margin-left: 5px;
         position: relative;
         bottom: 1px;
+        right: 0;
       }
     }
   }
 
   .curtain {
     display: none;
-    @include breakpoint(sm) {
+    padding: 0;
+    @media (min-width: 810px) {
       margin-top: 5px;
       position: absolute;
       padding: 0;
@@ -42,7 +46,7 @@
     }
 
     > li {
-      @include breakpoint(sm) {
+      @media (min-width: 810px) {
         width: 100%;
         margin-right: 0;
       }
@@ -51,7 +55,11 @@
       }
 
       > a {
-        @include breakpoint(sm) {
+        background-color: $lightGrey;
+        color: $black;
+        @media (min-width: 810px) {
+          background-color: inherit;
+          color: inherit;
           padding: 8px 10px 8px 10px;
           border-top: 1px solid $mainColorOpac;
         }
@@ -61,7 +69,8 @@
   &.is_active {
     .dropdown_btn {
       &:after {
-        @include breakpoint(sm) {
+        content: "\f068";
+        @media (min-width: 810px) {
           content: "\f077";
         }
       }
