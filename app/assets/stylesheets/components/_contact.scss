@@ -1,4 +1,4 @@
-.contact { 
+.contact {
   font-family: $fontRoboto;
   font-weight: 100;
   position: relative;
@@ -54,6 +54,10 @@
   }
 
   .user {
+    input, textarea {
+      margin-top: 20px;
+    }
+
     textarea {
       height: 90px;
     }
@@ -64,6 +68,10 @@
       @include breakpoint(lg) {
         width: 70%;
       }
+    }
+
+    .gotcha {
+      display: none;
     }
 
     .btn {
